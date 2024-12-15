@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>To-Do List</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="container1" class="container">
+            <input type="text" class="search-task-input" placeholder="Search the task...">
+            <div class="filter-section filter-section-container">
+                <label class="filter-label">Filter:</label>
+                    <button class="filter-button-all">All</button>
+                    <button class="filter-button-active">Active</button>
+                    <button class="filter-button-completed">Completed</button>
+            </div>
+
+        <div class="date-filter date-filter-section">
+            <label class="date-filter-label">Start Date:</label>
+            <input type="date" class="filter-start-date" placeholder="Start Date">
+            <label class="date-filter-label">End Date:</label>
+            <input type="date" class="filter-end-date" placeholder="End Date">
+        </div>
+
+        <div class="keyword-search keyword-search-section">
+    <label class="keyword-search-label">Search by Keyword</label>
+    <input list="keywordList" class="keyword-search-input" placeholder="Search by keyword...">
+    <datalist class="keyword-list">
+        <option value="complete">
+        <option value="urgent">
+        <option value="later">
+        <option value="priority">
+        <option value="high">
+        <option value="low">
+        <option value="medium">
+        <option value="important">
+        <option value="today">
+        <option value="overdue">
+    </datalist>
+</div>
+
+            <div class="groupBy group-by-section">
+                <lable class="group-by-label">Group By:</lable>
+                <select class="group-by-select" >
+                    <option style="color: lightgrey;" placeholder="--datalist--">--Select--</option>
+                    <option value="grpbyTask" class="group-by-option">Group By Task</option>
+                    <option value="recent" class="group-by-option">Recently Modified</option>
+                    <option value="alphabetical" class="group-by-option">Alphabetical Order</option>
+                    <option value="startDate" class="group-by-option">Sort by Start Date</option>
+                    <option value="endDate" class="group-by-option">Sort by End Date</option>
+                </select>
+            </div>
+            <div class="reset-button-container">
+                <button  class="reset-button">Reset</button>
+            </div>
+            <div class="to-do to-do-list-container">
+                <h1 class="to-do-header">To-Do List <img src="assets/images/icon.png" alt="icon"></h1>
+                <div class="row task-input-container">
+                    <input type="text" class="task-input" placeholder="What's your next task...?">
+                    <button class="add-task-button" >Add</button>
+                </div>
+
+                <div class="task-dates task-dates-container">
+                    <input type="date" class="task-start-date" placeholder="Start Date">
+                    <input type="date" class="task-end-date" placeholder="End Date">
+                </div>
+                <ul class="task-list-container">
+                    <!-- <li class="checked">task1</li>
+                    <li>task2</li>
+                    <li>task3</li> -->
+                </ul>
+                
+            </div>
+        </div>
+------------------------------------------------------------------------
+        <div id="container2" class="container">
+            <input type="text" class="search-task-input" placeholder="Search the task...">
+            <div class="filter-section filter-section-container">
+                <label class="filter-label">Filter:</label>
+                    <button class="filter-button-all">All</button>
+                    <button class="filter-button-active">Active</button>
+                    <button class="filter-button-completed">Completed</button>
+            </div>
+
+        <div class="date-filter date-filter-section">
+            <label class="date-filter-label">Start Date:</label>
+            <input type="date" class="filter-start-date" placeholder="Start Date">
+            <label class="date-filter-label">End Date:</label>
+            <input type="date" class="filter-end-date" placeholder="End Date">
+        </div>
+
+        <div class="keyword-search keyword-search-section">
+    <label class="keyword-search-label">Search by Keyword</label>
+    <input list="keywordList" class="keyword-search-input" placeholder="Search by keyword...">
+    <datalist class="keyword-list">
+        <option value="complete">
+        <option value="urgent">
+        <option value="later">
+        <option value="priority">
+        <option value="high">
+        <option value="low">
+        <option value="medium">
+        <option value="important">
+        <option value="today">
+        <option value="overdue">
+    </datalist>
+</div>
+
+            <div class="groupBy group-by-section">
+                <lable class="group-by-label">Group By:</lable>
+                <select class="group-by-select" >
+                    <option style="color: lightgrey;" placeholder="--datalist--">--Select--</option>
+                    <option value="grpbyTask" class="group-by-option">Group By Task</option>
+                    <option value="recent" class="group-by-option">Recently Modified</option>
+                    <option value="alphabetical" class="group-by-option">Alphabetical Order</option>
+                    <option value="startDate" class="group-by-option">Sort by Start Date</option>
+                    <option value="endDate" class="group-by-option">Sort by End Date</option>
+                </select>
+            </div>
+            <div class="reset-button-container">
+                <button  class="reset-button">Reset</button>
+            </div>
+            <div class="to-do to-do-list-container">
+                <h1 class="to-do-header">To-Do List <img src="assets/images/icon.png" alt="icon"></h1>
+                <div class="row task-input-container">
+                    <input type="text" class="task-input" placeholder="What's your next task...?">
+                    <button class="add-task-button" >Add</button>
+                </div>
+
+                <div class="task-dates task-dates-container">
+                    <input type="date" class="task-start-date" placeholder="Start Date">
+                    <input type="date" class="task-end-date" placeholder="End Date">
+                </div>
+                <ul class="task-list-container">
+                    <!-- <li class="checked">task1</li>
+                    <li>task2</li>
+                    <li>task3</li> -->
+                </ul>
+                
+            </div>
+        </div>
+        
+        
+        <script type="module" src="js/model/model01.js" defer></script>
+        <script type="module" src="js/view/views01.js" defer></script>
+        <script type="module" src="js/controller/controller01.js" defer></script>
+        <script type="module" src="js/main.js" defer></script>
+        
+    </body>
+</html>

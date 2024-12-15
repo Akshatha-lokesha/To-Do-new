@@ -1,0 +1,324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.container{
+    position: relative;
+    min-width:  100vh;
+    min-height: 100vh;
+    padding: 10px;
+    background-attachment: scroll;
+    background-size: cover;
+    background: linear-gradient(135deg,lavender,pink);
+}
+
+.to-do{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background: filter(blur);
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    background:rgba(252, 252, 252,0.3);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.to-do h1{
+    color:hotpink;
+    align-items: center;
+    text-shadow: 5px 5px 30px rgb(189, 111, 222);
+    display: flex;
+    margin-bottom: 10px;
+    padding-left: 85px;
+}
+
+.to-do h1 img{
+    width: 50px;
+    padding-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px auto 30px;
+}
+
+#ipBox{
+    flex: 1;
+    font-size: 18px;
+    border: 2px transparent;
+    border-radius: 10px;
+    background: transparent;
+    padding: 5px;
+    box-shadow: inset 0px 0px 30px rgb(226, 202, 247);
+}
+
+#ipBox:hover{
+    box-shadow: none;
+    background-color: aliceblue;
+    transition: all 0.2s ease-in-out;
+}
+
+.row button{
+    border:none;
+    float: left;
+    font-size: 18px;
+   color: aliceblue;
+   font-weight: bolder;
+   background-color: rgb(249, 172, 40);
+    padding: 6px 30px;
+    border-radius: 20px;
+    outline: none;
+    left: 20px;
+}
+
+.row button:hover{
+    /* transition: 3s ease-in-out 1s ; */
+    background-color: yellowgreen;
+    box-shadow: 0px 0px 20px rgb(231, 176, 255);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.to-do ul li{
+    word-break: break-all;
+    height: fit-content;
+    width:fit-content;
+}
+
+ul li{
+    list-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-style: oblique;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 20px 8px 12px 50px;
+    position: relative;
+    height: fit-content;
+    width:fit-content;
+    max-width: 400px;
+    box-sizing: border-box;
+
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url("../assets/images/unchecked.png");
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    /* top: 12px; */
+    left:8px ;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color:lightslategray ;
+}
+
+
+ul li.checked::before{
+    background-image: url("../assets/images/checked.png");
+}
+
+ul li .cross-btn{
+    position: absolute;
+    bottom: 40px;
+    left:470px;
+   padding: 5px 5px 5px 5px;
+   font-weight: bolder;
+   border-radius: 30%;
+  
+}
+
+ul li .cross-btn:hover{
+    background: rgba(228, 124, 124, 0.1);
+    color: red;
+}
+
+ul li button{
+    background-color:transparent ;
+    padding: 10px 10px 10px 10px;
+    border-radius: 40%;
+    width: 60px;
+    border: none;
+    left: 400px;
+    top:10px;
+    position: absolute;
+}
+
+ul li button:hover{
+    background-color: rgba(97, 247, 60, 0.3);
+    transition: all 0.5s ease-in-out ;
+    color: rgb(11, 83, 11);
+}
+
+.startDate,.endDate{
+    font-size: small;
+    word-spacing: 10px;
+    display: block;
+}
+.startDate{
+    color: rgb(36, 146, 109);
+}
+
+.endDate{
+    color: #f44336;
+}
+
+ul li input{
+    box-shadow: inset 0px 0px 20px rgb(237, 223, 225);
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 40px;
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    top: 50px;
+}
+
+.container .task-dates{
+    left: 40px;
+}
+
+.container #searchTask{
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    width: 400px;
+    left: 455px;
+    border: none;
+    border-radius: 20px;
+    background: transparent;
+    box-shadow: inset 10px 15px 30px rgb(234, 182, 234);
+}
+
+.container #searchTask:hover{
+    background-color: aliceblue;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow:  none;
+}
+
+.filter-btn {
+    position: absolute;
+    top: 40px; 
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    gap: 15px; 
+}
+
+.filter-btn label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ #all, #active,#completed{
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    border: none; 
+    background-color: transparent;
+
+}
+
+#all:hover, #active:hover,#completed:hover {
+    background-color: yellowgreen; 
+    color: whitesmoke;
+    transition: all 0.3s ease-in-out;
+}
+
+.groupBy #grpbyBtn{
+   padding: 5px 5px 5px 5px;
+   position: absolute;
+   top: 15%;
+   left: 20px;
+   border: none;
+   position: absolute;
+   background-color: transparent;
+   border-radius: 20px;
+}
+
+.groupBy #grpbyBtn:hover{
+    background-color: crimson;
+    color: whitesmoke;
+    padding: 10px 10px 10px 10px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.to-do progress{
+    top:40px
+}
+
+progress {
+    width: 80px;
+    height: 10px;
+    appearance: none;
+    color: green;
+    position: absolute;
+    left:40px;
+    margin-top: -30px;
+}
+
+progress::-webkit-progress-value {
+    background-color: green !important;
+}
+
+progress::-moz-progress-bar {
+    background-color: green !important;
+}
+
+progress.completed::-webkit-progress-value {
+    background-color: #4CAF50 !important;
+}
+
+progress.completed::-moz-progress-bar {
+    background-color: #4CAF50 !important;
+}
+
+progress.overdue::-webkit-progress-value {
+    background-color: #f44336 !important ;
+}
+
+progress.overdue::-moz-progress-bar {
+    background-color: #f44336 !important;
+}
+
+progress.due-today::-webkit-progress-value {
+    background-color: #FF9800 !important;
+}
+
+progress.due-today::-moz-progress-bar {
+    background-color: #FF9800 !important;
+}
+
+progress.not-started::-webkit-progress-value {
+    background-color: #9E9E9E !important;
+}
+
+progress.not-started::-moz-progress-bar {
+    background-color: #9E9E9E !important;
+}
+
+progress.in-progress::-webkit-progress-value {
+    background-color: #2196F3 !important;
+}
+
+progress.in-progress::-moz-progress-bar {
+    background-color: #2196F3 !important;
+}
+
+
+.to-do-list{
+    /* display: inline;
+    fl */
+}
+
